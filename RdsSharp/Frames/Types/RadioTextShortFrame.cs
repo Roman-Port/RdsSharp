@@ -1,0 +1,35 @@
+using System;
+
+namespace RdsSharp.Frames.Types
+{
+    public class RadioTextShortFrame : RdsFrame
+    {
+        public RadioTextShortFrame(ulong raw) : base(raw) {}
+
+        public int TextSegment
+        {
+            get => ReadInt(28, 4);
+            set => WriteInt(28, 4, value);
+        }
+    
+        public bool TextAB
+        {
+            get => ReadBool(27, 1);
+            set => WriteBool(27, 1, value);
+        }
+    
+        public char RadioTextA
+        {
+            get => ReadChar(48, 8);
+            set => WriteChar(48, 8, value);
+        }
+    
+        public char RadioTextB
+        {
+            get => ReadChar(56, 8);
+            set => WriteChar(56, 8, value);
+        }
+    
+
+    }
+}
