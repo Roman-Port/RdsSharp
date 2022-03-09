@@ -18,13 +18,13 @@ namespace RdsSharp.Frames.Types
             set => WriteBool(27, 1, value);
         }
     
-        public char RadioTextA
+        public char RadioText2A
         {
             get => ReadChar(48, 8);
             set => WriteChar(48, 8, value);
         }
     
-        public char RadioTextB
+        public char RadioText2B
         {
             get => ReadChar(56, 8);
             set => WriteChar(56, 8, value);
